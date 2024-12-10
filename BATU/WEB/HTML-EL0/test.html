@@ -127,19 +127,40 @@ button {
                 <h2>LOGIN</h2>
 
                 <div class="inputbox">
-                    <input type="text" required name="user">
+                    <input type="text" required name="user" autofocus>
                     <label>USER</label>
                     <ion-icon name="person-outline"></ion-icon>
                 </div>
 
                 <div class="inputbox">
-                    <input type="password" required name="pass">
+                    <input type="password" required name="pass" minlength="4" maxlength="4">
                     <label>PASSWORD</label>
                     <ion-icon name="lock-closed-outline"></ion-icon>
                 </div>
                 <div>
                     <input type="range" required name="age" min="18" max="100" step="1" value="0">
                     <label>Range</label>
+                </div>
+                <div>
+                    <input id="ch" type="radio" required name="radio" value="radio">
+                    <label for="ch">radio</label>
+                </div>
+                <div>
+                    <input id="ch1" type="checkbox" name="check" value="checkbox">
+                    <label for="ch1">check</label>
+                </div>
+                <div>
+                    <label for="G">choose:</label>
+                    <select required name="gender" id="G">
+                        <option value="1">male</option>
+                        <option value="2">female</option>
+                    </select>
+                    <hr>
+                    <div>
+                        <textarea name="comment" cols="20" rows="3" placeholder="write"></textarea>
+                    </div>
+                    <hr>
+
                 </div>
                 <button type="submit">DONE</button>
             </form>
