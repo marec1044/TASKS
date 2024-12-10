@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test</title>
     <style>
         body {
             margin: 0;
-            overflow: hidden; 
+            overflow: hidden;
             justify-content: center;
             align-items: center;
-
         }
 
         video {
@@ -20,7 +20,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1; 
+            z-index: -1;
         }
 
         audio {
@@ -29,124 +29,127 @@
             top: 10px;
             left: 10px;
         }
+
         section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+        }
 
-.form-box {
-  position: relative;
-  width: 400px;
-  height: 450px;
-  border: 2px solid white;
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-h2 {
-  font-size: 2em;
-  color: #fff;
-  text-align: center;
-}
+        .form-box {
+            position: relative;
+            width: 400px;
+            height: 550px;
+            border: 2px solid white;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.inputbox {
-  position: relative;
-  margin: 30px 0;
-  width: 310px;
-  border-bottom: 2px solid #fff;
-}
+        h2 {
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+        }
 
-.inputbox label {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 1em;
-  pointer-events: none;
-  transition: 0.5s;
-}
+        .inputbox {
+            position: relative;
+            margin: 30px 0;
+            width: 310px;
+            border-bottom: 2px solid #fff;
+        }
 
-input:focus ~ label {
-  top: -5px;
-}
-input:valid ~ label {
-  top: -5px;
-}
+        .inputbox label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 1em;
+            pointer-events: none;
+            transition: 0.5s;
+        }
 
-.inputbox input {
-  width: 100%;
-  height: 50px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  padding: 0 35px 0 5px;
-  color: #fff;
-}
+        input:focus~label {
+            top: -5px;
+        }
 
-.inputbox ion-icon {
-  position: absolute;
-  right: 8px;
-  color: #fff;
-  font-size: 1.2em;
-  top: 20px;
-}
+        input:valid~label {
+            top: -5px;
+        }
 
-button {
-  width: 100%;
-  height: 40px;
-  border-radius: 40px;
-  background: #cbccdf;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 600;
-  color:#fff;
-}
+        .inputbox input {
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            padding: 0 35px 0 5px;
+            color: #fff;
+        }
+
+        .inputbox ion-icon {
+            position: absolute;
+            right: 8px;
+            color: #fff;
+            font-size: 1.2em;
+            top: 20px;
+        }
+
+        button {
+            width: 100%;
+            height: 40px;
+            border-radius: 40px;
+            background: #cbccdf;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            color: #fff;
+        }
     </style>
 </head>
+
 <body>
     <video autoplay loop muted>
-        <source src="v.mp4" type="video/mp4">
+        <source src="v.mp4" type="video/mp4" />
     </video>
     <audio autoplay loop controls>
-        <source src="a.mp3" type="audio/mp3">
+        <source src="a.mp3" type="audio/mp3" />
     </audio>
 
     <section>
         <div class="form-box">
-
             <form action="test.html" method="get">
                 <h2>LOGIN</h2>
 
                 <div class="inputbox">
-                    <input type="text" required name="user" autofocus>
+                    <input type="text" required name="user" autofocus />
                     <label>USER</label>
                     <ion-icon name="person-outline"></ion-icon>
                 </div>
 
                 <div class="inputbox">
-                    <input type="password" required name="pass" minlength="4" maxlength="4">
+                    <input type="password" required name="pass" minlength="4" maxlength="4" />
                     <label>PASSWORD</label>
                     <ion-icon name="lock-closed-outline"></ion-icon>
                 </div>
                 <div>
-                    <input type="range" required name="age" min="18" max="100" step="1" value="0">
+                    <input type="range" required name="age" min="18" max="100" step="1" value="0" />
                     <label>Range</label>
                 </div>
                 <div>
-                    <input id="ch" type="radio" required name="radio" value="radio">
+                    <input id="ch" type="radio" required name="radio" value="radio" />
                     <label for="ch">radio</label>
                 </div>
                 <div>
-                    <input id="ch1" type="checkbox" name="check" value="checkbox">
+                    <input id="ch1" type="checkbox" name="check" value="checkbox" />
                     <label for="ch1">check</label>
                 </div>
                 <div>
@@ -155,18 +158,25 @@ button {
                         <option value="1">male</option>
                         <option value="2">female</option>
                     </select>
-                    <hr>
+                    <hr />
                     <div>
                         <textarea name="comment" cols="20" rows="3" placeholder="write"></textarea>
                     </div>
-                    <hr>
-
+                    <hr />
+                    <div>
+                        <label>up</label>
+                        <input type="file" />
+                    </div>
+                    <hr />
                 </div>
                 <button type="submit">DONE</button>
             </form>
         </div>
-
     </section>
-
+    <!-- 
+    |||||iframe in git.html page|||||
+    |||||باقي الانواع نفذتها ذهنيا :) |||||
+    -->
 </body>
+
 </html>
